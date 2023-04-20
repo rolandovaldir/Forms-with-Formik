@@ -2,17 +2,19 @@ import React from 'react';
 import './App.css';
 import { useFormik} from 'formik';
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 function App() {
   const formik = useFormik({
     initialValues: {
       email: '',
-      password: ''      
+      password: '',
+      rememberMe: []   
     },
-    onSubmit: values =>{
-      if(!formik.errors.email && !formik.errors.password){
-        setTimeout(() => {
+    onSubmit: async (values) =>{
+      if(!formik.errors.email && !formik.errors.password){      
+          await sleep(500);
           alert("Login Successful");
-        }, 400);
       }
     },
     validate: values =>{
