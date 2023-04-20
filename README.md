@@ -1,3 +1,11 @@
+# Forms using Formik
+
+Here we implemented a REACT app whit npm chaintool.
+This form is validated as follows:
+ - If the username or password inputs are empty, display the message "Field required" under the text input.
+ - If the username is not in an email format, display the message "Username should be an email" under the text input.
+ - If the username and password pass the above validations, then display the message "Login Successful" in an alert box.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
